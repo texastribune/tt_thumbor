@@ -1,0 +1,10 @@
+version: '2'
+services:
+  wsgi:
+    build: .
+    ports:
+      - "8888:8888"
+    env_file:
+      - ./.env
+    entrypoint: ./docker-entrypoint.sh
+

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-echo $PORT
+echo $THUMBOR_PORT
 
-thumbor --port=$PORT --conf=/app/thumbor.conf
+thumbor --port=$THUMBOR_PORT --conf=/app/thumbor.conf

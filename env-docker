@@ -9,7 +9,3 @@ THUMBOR_LOGGING_LEVEL=info
 
 # Change to secure password on production
 THUMBOR_SECURITY_KEY=TEST_KEY
-
-# Talk to AWS using your personal key
-AWS_ACCESS_KEY_ID=Add yours here
-AWS_SECRET_ACCESS_KEY=Add yours here

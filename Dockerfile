@@ -8,6 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY thumbor.conf /app
 
-VOLUME /thumbor-efs
-
 CMD thumbor --port=$THUMBOR_PORT --conf=/app/thumbor.conf --log-level=$THUMBOR_LOGGING_LEVEL

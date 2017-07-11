@@ -6,4 +6,5 @@ services:
       - "8888:8888"
     env_file:
       - ./env-docker
-
+    volumes:
+      - /thumbor-efs:/thumbor-efs

@@ -3,6 +3,9 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app
 
+RUN apt-get update
+RUN apt-get install gifsicle
+
 COPY requirements.txt /app
 RUN pip install -r requirements.txt
 

@@ -24,16 +24,14 @@ class ErrorHandler(object):
 
         exc_info = exc_info_from_error(exception)
 
-        with sentry_sdk.push_scope() as scope:
+        with sentry_sdk.push_scope():
             event, hint = event_from_exception(exc_info)
-            if "request" not in event:
-                event["request"] = {}
-            event["request"].update({
+            event["request"] = {
                 "url": req.full_url(),
                 "method": req.method,
                 "data": req.arguments,
                 "query_string": req.query,
                 "headers": req.headers,
                 "body": req.body,
-            })
-            scope.capture_event(event, hint=hint)
+            }
+            sentry_sdk.capture_event(event, hint=hint)

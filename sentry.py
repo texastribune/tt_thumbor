@@ -26,8 +26,9 @@ class ErrorHandler(object):
 
         with sentry_sdk.push_scope() as scope:
             event, hint = event_from_exception(exc_info)
-            req_info = event["request"]
-            req_info.update({
+            if "request" not in event:
+                event["request"] = {}
+            event["request"].update({
                 "url": req.full_url(),
                 "method": req.method,
                 "data": req.arguments,

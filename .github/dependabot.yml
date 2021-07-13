@@ -5,7 +5,9 @@ updates:
   schedule:
     interval: daily
     time: "11:00"
-  open-pull-requests-limit: 10
+  labels:
+    - "python"
+    - "dependencies"
   ignore:
   - dependency-name: botocore
     versions:

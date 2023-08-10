@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "tt_thumbor"
+version = "0.1.0"
+authors = ["Texas Tribune"]
+description = ""
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+opencv-python= "^4.8"
+thumbor= "^7.5.2"
+# botocore= "^1.31"
+tc_aws= "^7.0.2"
+sentry-sdk="*"
+# tc-prometheus= "^0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
